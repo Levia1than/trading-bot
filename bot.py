@@ -9,7 +9,7 @@ import sqlite3
 from datetime import datetime, timedelta
 from telebot import types
 
-TOKEN = '8708100304:AAHBgiku3usAU7lu8W-JU-JY92DMb-C-k-0'
+TOKEN = 'BOT_TOKEN'
 bot = telebot.TeleBot(TOKEN)
 
 DB_FILE = "bot_database.db"
