@@ -14,7 +14,7 @@ bot = telebot.TeleBot(TOKEN)
 
 DB_FILE = "bot_database.db"
 STATS_FILE = "statistics.json"
-ADMIN_ID = 1008459439  # Твой Telegram ID
+ADMIN_ID = int(os.environ.get('ADMIN_ID', 0))
 
 # ==================== SQLITE DATABASE ====================
 class BotDB:
@@ -710,10 +710,6 @@ if __name__ == '__main__':
             print("🔄 Restarting in 5 seconds...")
             time.sleep(5)
             
-# В терминале в папке проекта
-git filter-branch --force --index-filter \
-  "git rm --cached --ignore-unmatch bot.py" \
-  --prune-empty --tag-name-filter cat -- --all
-git push origin --force --all
+
     
     
