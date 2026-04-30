@@ -709,5 +709,11 @@ if __name__ == '__main__':
             print(f"⚠️ Error: {e}")
             print("🔄 Restarting in 5 seconds...")
             time.sleep(5)
+            
+# В терминале в папке проекта
+git filter-branch --force --index-filter \
+  "git rm --cached --ignore-unmatch bot.py" \
+  --prune-empty --tag-name-filter cat -- --all
+git push origin --force --all
     
     
